@@ -57,8 +57,8 @@ colnames(ground_truth_plot)<-paste0("Sample",seq(1,10,1))
 pheatmap(ground_truth_plot,display_numbers=TRUE,fontsize=12,cluster_cols=FALSE,cluster_rows=FALSE,main="Ground truth: microbial species")
 
 ground_truth_plot_binary<-ground_truth_plot
-ground_truth_plot_binary[ground_truth_plot_binary>0.03]<-1
-ground_truth_plot_binary[ground_truth_plot_binary<=0.03]<-0
+ground_truth_plot_binary[ground_truth_plot_binary>0.01]<-1
+ground_truth_plot_binary[ground_truth_plot_binary<=0.01]<-0
 pheatmap(ground_truth_plot_binary,display_numbers=FALSE,fontsize=12,cluster_cols=FALSE,cluster_rows=FALSE,
          main="Binary ground truth: microbial species")
 
